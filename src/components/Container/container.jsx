@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Container.css"   // 👈 import css
+import "./container.css"   // 👈 import css
 
 function Container({ children }) {
   return (
