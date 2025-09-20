@@ -1,0 +1,55 @@
+
+/* Container */
+.input-container {
+  width: 100%;
+}
+
+/* Label */
+.input-label {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  padding-left: 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Input Field */
+.input-field {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* On focus */
+.input-field:focus {
+  background-color: #f9f9f9;
+  border-color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .input-field {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.95rem;
+  }
+  .input-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-field {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.9rem;
+    border-radius: 0.4rem;
+  }
+  .input-label {
+    font-size: 0.85rem;
+  }
+}

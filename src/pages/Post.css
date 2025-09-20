@@ -1,0 +1,91 @@
+/* Wrapper */
+.post-wrapper {
+  padding: 2rem 0;
+}
+
+/* Image Section */
+.post-image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  background-color: #fafafa;
+}
+
+/* Post Image */
+.post-image {
+  border-radius: 0.75rem;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Edit + Delete Buttons */
+.post-actions {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Post Title */
+.post-title {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.post-title h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Post Content */
+.post-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .post-title h1 {
+    font-size: 1.4rem;
+  }
+  .post-content {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-wrapper {
+    padding: 1.5rem 0;
+  }
+  .post-title h1 {
+    font-size: 1.25rem;
+  }
+  .post-actions {
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-wrapper {
+    padding: 1rem 0;
+  }
+  .post-title h1 {
+    font-size: 1.1rem;
+  }
+  .post-content {
+    font-size: 0.9rem;
+  }
+  .post-image-section {
+    padding: 0.25rem;
+  }
+}

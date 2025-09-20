@@ -1,0 +1,33 @@
+/* Wrapper */
+.rte-wrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Label */
+.rte-label {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding-left: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+/* TinyMCE custom overrides */
+.tox-tinymce {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+/* Editor content style */
+.tox .tox-edit-area__iframe {
+  min-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .tox .tox-edit-area__iframe {
+    min-height: 220px;
+  }
+}

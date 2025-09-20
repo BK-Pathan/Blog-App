@@ -1,0 +1,69 @@
+/* Container */
+.post-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left section */
+.post-form-left {
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+}
+
+/* Right section */
+.post-form-right {
+  flex: 0.4;
+  min-width: 250px;
+  padding: 10px;
+}
+
+/* Input and Select fields */
+.post-input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.post-select {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Featured image preview */
+.post-image-preview {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.post-image-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Button */
+.post-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.post-button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .post-form {
+    flex-direction: column;
+  }
+  .post-form-left,
+  .post-form-right {
+    min-width: 100%;
+  }
+}
