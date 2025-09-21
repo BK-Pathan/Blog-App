@@ -17,6 +17,7 @@ export class Service {
     }
 
 
+
 async createPost({ title, slug, content, featuredImage, status, userId }) {
   try {
     return await this.databases.createDocument(
@@ -32,15 +33,16 @@ async createPost({ title, slug, content, featuredImage, status, userId }) {
         userId
       },
       [
-    'any',                   // read: sab read kar sakte hain
-    `user:${userId}`,        // write/update: sirf owner
-    `user:${userId}`         // delete: sirf owner
-  ]
+        Permission.read(Role.any()),            // sab read kar sakte hain
+        Permission.update(Role.user(userId)),   // sirf owner update
+        Permission.delete(Role.user(userId))    // sirf owner delete
+      ]
     )
   } catch (error) {
     console.log("Appwrite service :: createPost :: error", error)
   }
 }
+
 
     async updatePost(postId, { title, slug, content, featuredImage, status }) {
         try {
