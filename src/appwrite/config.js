@@ -30,12 +30,7 @@ async createPost({ title, slug, content, featuredImage, status, userId }) {
         featuredImage,
         status,
         userId
-      },
-      [
-        Permission.read(Role.any()),            // sab read kar sakte hain
-        Permission.update(Role.user(userId)),   // sirf owner update kar sakta hai
-        Permission.delete(Role.user(userId))    // sirf owner delete kar sakta hai
-      ]
+      }
     )
   } catch (error) {
     console.log("Appwrite service :: createPost :: error", error)
