@@ -2,6 +2,7 @@ import conf from '../conf/conf';
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 import {  Permission, Role } from "appwrite";
 
+
 export class Service {
     client = new Client();
     databases;
@@ -17,25 +18,20 @@ export class Service {
     }
 
 
-async createPost({ title, slug, content, featuredImage, status, userId }) {
-  try {
-    return await this.databases.createDocument(
-      conf.appwriteDATABASEID,
-      conf.appwriteCOLLECTIONID,
-      slug || ID.unique(),  
-      { 
-        title,
-        slug,               
-        content,
-        featuredImage,
-        status,
-        userId
-      }
-    )
-  } catch (error) {
-    console.log("Appwrite service :: createPost :: error", error)
-  }
-}
+async createPost({ title, slug, content, featuredImage, status, userId }) 
+{ try { return await this.databases.createDocument
+    ( conf.appwriteDATABASEID, conf.appwriteCOLLECTIONID, slug, 
+        { id: slug, 
+      title, 
+      slug, 
+      content, 
+      featuredImage, 
+      status, 
+      userId } ); 
+    } 
+    catch (error) 
+    { console.log("Appwrite service :: createPost :: error", error); } }
+
 
     async updatePost(postId, { title, slug, content, featuredImage, status }) {
         try {
