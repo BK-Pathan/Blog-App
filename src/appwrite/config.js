@@ -30,7 +30,12 @@ async createPost({ title, slug, content, featuredImage, status, userId }) {
         featuredImage,
         status,
         userId
-      }
+      },
+      [
+    'any',                   // read: sab read kar sakte hain
+    `user:${userId}`,        // write/update: sirf owner
+    `user:${userId}`         // delete: sirf owner
+  ]
     )
   } catch (error) {
     console.log("Appwrite service :: createPost :: error", error)
