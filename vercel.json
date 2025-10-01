@@ -4,6 +4,7 @@
     { "src": "package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
+    { "src": "/google[a-z0-9]+\\.html", "dest": "/google224444b2091ddfd1.html" },
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
